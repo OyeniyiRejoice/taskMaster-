@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api'; // Adjust based on your backend URL
+const API_URL = 'http://localhost:3000/api'; 
 
 // Register User
 document.getElementById('registerForm')?.addEventListener('submit', async (e) => {
