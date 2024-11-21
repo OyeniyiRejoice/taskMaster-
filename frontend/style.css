@@ -1,0 +1,231 @@
+
+
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background: linear-gradient(to right, #e2f0ff, #c9d6ff);
+    padding: 20px;
+    
+}
+.container{
+    background:#e2f0ff;
+    max-height: 100vh;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+nav{
+    flex: 1;
+    margin-left: 1000px;
+    
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.hero-details{
+    width: 700px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+h2{
+    color: #218838;
+    font-weight: 600;
+    line-height: 60px;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.text2{
+    font-weight:475;
+    text-decoration:none solid rgba(37, 34, 30, 0.66);
+    text-align:start;
+    font-size: 25px;
+    text-indent: start;
+    margin-bottom: 50px;
+}
+.big-button{
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+    background: orangered;
+    margin-left: 230px;
+    
+}
+
+.text-lockup{
+    width: 700px;
+    height: 300px;
+    padding: 30px;
+    background: white;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text3{
+    font-size: 25px;
+    font-weight:475;
+    text-decoration:none solid rgba(37, 34, 30, 0.66);
+    text-align:start;
+    text-indent: start;
+    margin-bottom: 50px;
+}
+/*style for register and login page*/
+
+.register-container{
+    background-color: white;
+    width: 500px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+
+.login-container{
+    background-color: white;
+    width: 500px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+.task-container{
+    background-color: white;
+    width: 500px;
+    /*height: 100vh;*/
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+form {
+    width: 100%;  
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    /*box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);*/
+}
+
+.button{
+    padding-inline: 14px;
+    padding-block: 9px;
+    min-width: 65px;
+    min-height: inherit;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+h1{
+    color:#e44232 ;
+    text-align: center;
+}
+
+.text1{
+
+    margin-left: 90px;
+}
+
+input, select, button {
+    display: block;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+nav a {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* Task List Styles */
+.task-list {
+    margin-top: 20px;
+}
+
+.task-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-item h3 {
+    margin: 0;
+    color: #333;
+}
+
+.task-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.task-item button {
+    background-color: #dc3545;
+    padding: 5px 10px;
+}
+
+.task-item button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    textarea,
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
