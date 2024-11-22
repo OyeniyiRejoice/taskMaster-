@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api'; 
+const API_URL = 'https://backend-wild-field-1148.fly.dev/'; 
 
 // Register User
 document.getElementById('registerForm')?.addEventListener('submit', async (e) => {
