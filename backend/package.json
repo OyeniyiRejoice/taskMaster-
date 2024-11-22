@@ -19,5 +19,8 @@
     "mongodb": "^6.10.0",
     "mongoose": "^8.8.2",
     "node": "^20.18.1"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.9"
   }
 }
