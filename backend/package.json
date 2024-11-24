@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Adenike Oyeniyi",
   "license": "ISC",
-  "description": "",
+  "description": "A backend api for my application",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",

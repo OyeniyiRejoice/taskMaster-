@@ -9,7 +9,23 @@ const taskRoutes = require('./routes/tasks');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+/*
+// Custom CORS options
+const corsOptions = {
+    origin: ['https://taskmaster-deploy-hotr.vercel.app/', 'https://taskmaster-deploy-hotr-hmywmdy6h.vercel.app/'], 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    exposedHeaders: ['Content-Length', 'X-Knowledge-Base'], // Exposed headers
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+    maxAge: 3600, // Cache preflight response for 1 hour
+};
+app.use(cors(corsOptions));*/
+
+
+app.use(cors({
+    origin: 'https://taskmaster-deploy-hotr.vercel.app/', 
+}));
+
 app.use(express.json());
 
 // Connect to MongoDB 
