@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const authRoutes = require('./routes/auth');
+const {loginRoute, registerRoute} = require('./routes/auth');
 const taskRoutes = require('./routes/tasks');
 
 dotenv.config();
@@ -12,7 +12,8 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'https://taskmaster-deploy-hotr.vercel.app/', 
+    origin: ['https://taskmaster-deploy-hotr.vercel.app/', 'http://127.0.0.1:5500'], 
+    
 }));
 
 
@@ -30,14 +31,15 @@ app.get('/', (req, res) => {
 
 
 // Use routes
-app.use('/api/auth', authRoutes);
-app.use('/api/tasks', taskRoutes);
+app.use('/', loginRoute);
+app.use('/', registerRoute)
+app.use('/tasks', taskRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 3000;
 /*app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });*/
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running on http://0.0.0.0:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
