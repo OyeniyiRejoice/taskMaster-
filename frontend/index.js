@@ -85,7 +85,7 @@ async function fetchTasks() {
             displayTasks(tasks);
         } else {
             const errorData = await response.json();
-            alert(`Failed to fetch tasks: ${errorData.message || 'Unknown error'}`);
+            alert(`Failed to fetch tasks here: ${errorData.message || 'Unknown error'}`);
         }
     } catch (error) {
         console.error('Error:', error);
