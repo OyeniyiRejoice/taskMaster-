@@ -1,12 +1,12 @@
 const express = require('express');
 const { body, validationResult } = require('express-validator');
-const Task = require('../models/Task ');
+const Task = require('../models/Task');
 const authMiddleware = require('../middlewares/auth'); // Assuming you have an auth middleware for JWT verification
 
 const router = express.Router();
 
 // Create a new task
-router.post('/', authMiddleware, [
+router.post('/addPost', authMiddleware, [
     body('title').notEmpty().withMessage('Title is required.'),
     body('description').optional().isString(),
     body('deadline').optional().isISO8601().toDate(),
@@ -36,7 +36,7 @@ router.post('/', authMiddleware, [
 });
 
 // Get all tasks for the authenticated user
-router.get('/', authMiddleware, async (req, res) => {
+router.get('/getPost', authMiddleware, async (req, res) => {
     try {
         const tasks = await Task.find({ userId: req.user.id });
         res.json(tasks);
