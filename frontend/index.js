@@ -1,4 +1,5 @@
 const API_URL = 'https://backend-wild-field-1148.fly.dev/'; 
+const test_api = 'http://localhost:3000';
 
 // Register User
 document.getElementById('registerForm')?.addEventListener('submit', async (e) => {
@@ -14,12 +15,12 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
         return;
     }
 
-
+    const textBody = JSON.stringify({ firstname, lastname, username, password });
     try {
-        const response = await fetch(`${API_URL}/auth/register`, {
+        const response = await fetch(`${test_api}/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ firstname, lastname, username, password }),
+            body: textBody
         });
         if (response.ok) {
             alert('Registration successful! Please log in.');
@@ -45,7 +46,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     }
 
     try {
-        const response = await fetch(`${API_URL}/auth/login`, {
+        const response = await fetch(`${test_api}/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
@@ -72,7 +73,7 @@ async function fetchTasks() {
     }
 
     try {
-        const response = await fetch(`${API_URL}/tasks`, {
+        const response = await fetch(`${test_api}/tasks/getPosts`, {
             method: 'GET',
             headers: {
                 'Authorization': token,
@@ -132,7 +133,7 @@ document.getElementById('taskForm')?.addEventListener('submit', async (e) => {
     }
   
     try {
-      const response = await fetch(`${API_URL}/tasks`, {
+      const response = await fetch(`${API_URL}/tasks/getPost`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
