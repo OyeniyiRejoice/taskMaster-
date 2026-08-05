@@ -24,10 +24,15 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
         if (response.ok) {
             alert('Registration successful! Please log in.');
             window.location.href = 'login.html';
-        } else {
+        } /*else {
             const data = await response.json();
             alert(data.message || 'Registration failed.');
-        }
+        }*/
+           else {
+    const data = await response.json();
+    console.log('Registration error:', JSON.stringify(data));
+    alert(JSON.stringify(data));
+}
     } catch (error) {
         console.error('Error:', error);
         alert('Something went wrong. Please try again.');
