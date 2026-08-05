@@ -5,7 +5,7 @@ A full stack task management application that helps users organize
 their work and life in one place.
 
 ## Live Demo
-[View App](https://task-master-orpin.vercel.app)
+[View App](https://task-master-three-plum.vercel.app)
 
 ## Features
 - User authentication with JWT
