@@ -10,14 +10,16 @@ dotenv.config();
 
 const app = express();
 
+/*trying cors again*/ 
+app.use(cors());
 
-app.use(cors({
+/*app.use(cors({
     origin: ['task-master-three-plum.vercel.app',
              'http://127.0.0.1:5500', 
              'http://localhost:5500'
             ],
 }));
-
+*/
 
 app.use(express.json());
 
